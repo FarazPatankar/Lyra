@@ -18,11 +18,11 @@
     </div>
     <div class="site-nav-right">
         {{#if @member}}
-            <a class="account-link" href="/account/">Account</a>
+            <a class="account-link" href={{concat @site.url "/account"}}>Account</a>
             <a class="button small header-cta signout-link" href="#signout" data-members-signout>Log out</a>
         {{else}}
-            <a class="signin-link" href="/signin/">Log in</a>
-            <a class="button primary small header-cta" href="/signup/">Subscribe</a>
+            <a class="signin-link" href={{concat @site.url "/signin"}}>Log in</a>
+            <a class="button primary small header-cta" href={{concat @site.url "/signup"}}>Sign Up</a>
         {{/if}}
     </div>
 </nav>

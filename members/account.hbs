@@ -21,7 +21,7 @@
             <h1 class="account-box-title">Currently, you're not a subscriber</h1>
             <p>Hey there! <strong>{{@member.email}}</strong> is subscribed to free updates from {{@site.title}}, but doesn't have a paid subscription to unlock full access.</p>
             <div class="authbox-signup">
-                <a class="button primary" href="/signup/">
+                <a class="button primary" href={{concat @site.url "/signup"}}>
                     <span class="button-content">Subscribe now</span>
                 </a>
             </div>
@@ -30,7 +30,7 @@
     {{else}}
 
         {{!-- Not logged in: Redirect to signin --}}
-        <script>window.location = '/signin/';</script>
+        <script>window.location = '/blog/signin/';</script>
 
     {{/if}}
 
